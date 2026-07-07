@@ -1,24 +1,41 @@
 /* =========================================================
-   FOOTER
+   FOOTER — Minimalist Edition
    ========================================================= */
 
 .site-footer {
-  padding: 2.5rem 0;
-  background: #08111f;
-  color: rgba(255, 255, 255, 0.84);
+  padding: 3.5rem 0;
+  background-color: #ffffff;
+  color: #212529;
+  border-top: 1px solid #eaeaea;
 }
 
 .site-footer .text-secondary {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: #6c757d !important;
 }
 
 .site-footer .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.3);
-  transition: background 0.2s, border-color 0.2s;
+  border: 1px solid #ced4da;
+  color: #212529;
+  font-weight: 600;
+  background-color: transparent;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .site-footer .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
-  color: #fff;
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+  color: #0c0d12;
+}
+
+.site-footer .btn-light {
+  background-color: #0c0d12;
+  color: #ffffff;
+  border: 1px solid #0c0d12;
+  font-weight: 600;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.site-footer .btn-light:hover {
+  background-color: #212529;
+  border-color: #212529;
 }
