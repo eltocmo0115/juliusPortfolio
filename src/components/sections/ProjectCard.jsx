@@ -1,12 +1,12 @@
 /**
  * ProjectCard — displays a single software project entry.
  *
- * @param {{ project: object, accent: 'primary'|'success' }} props
+ * @param {{ project: object }} props
  */
-function ProjectCard({ project, accent = 'primary' }) {
+function ProjectCard({ project }) {
   return (
     <article className="project-card card border-0 shadow-sm h-100">
-      <div className={`project-card__bar bg-${accent}`} aria-hidden="true" />
+      <div className="project-card__bar" aria-hidden="true" />
       <div className="card-body p-4">
         {/* Header */}
         <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">

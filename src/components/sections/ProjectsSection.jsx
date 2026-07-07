@@ -3,11 +3,6 @@ import ProjectCard from '@/components/sections/ProjectCard'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { softwareProjects } from '@/data/portfolioData'
 
-const ACCENTS = ['primary', 'success', 'primary', 'success']
-
-/**
- * Projects section — grid of ProjectCards, one per academic year.
- */
 function ProjectsSection() {
   const ref = useScrollAnimation()
   return (
@@ -19,9 +14,9 @@ function ProjectsSection() {
           description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
-          {softwareProjects.map((project, index) => (
+          {softwareProjects.map((project) => (
             <div className="col-lg-6" key={project.id}>
-              <ProjectCard project={project} accent={ACCENTS[index % ACCENTS.length]} />
+              <ProjectCard project={project} />
             </div>
           ))}
         </div>
