@@ -3,7 +3,9 @@ import { useActiveSection } from '@/hooks/useActiveSection'
 import { timeline, characterDialogue } from '@/data/portfolioData'
 import CharacterWatcher from '@/components/ui/CharacterWatcher'
 
-const SECTION_IDS = timeline.map((item) => item.target.replace('#', ''))
+// 'hero' is prepended so useActiveSection tracks it even though it has no
+// sidebar nav link — it just drives the speech bubble on the landing section.
+const SECTION_IDS = ['hero', ...timeline.map((item) => item.target.replace('#', ''))]
 
 /**
  * Sidebar navigation — fixed on the left on desktop, slides out as a drawer
