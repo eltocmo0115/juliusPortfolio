@@ -10,6 +10,17 @@ export const profile = {
   photo: null,
 }
 
+/** Section-aware dialogue lines for the sidebar character speech bubble. */
+export const characterDialogue = {
+  hero:         "Hey! I'm Julius. Scroll down to see what I've built.",
+  skills:       'These are the tools I use daily.',
+  certificates: "Proof I don't just say I know this stuff.",
+  seminars:     'Always learning something new.',
+  projects:     "Here's what I've actually shipped.",
+  capstone:     'This one took months. Worth it.',
+  hardware:     'Yes, I get my hands dirty with hardware too.',
+}
+
 
 export const programmingSkills = [
   { id: 'html-css', name: 'HTML / CSS', level: 95 },

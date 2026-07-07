@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useActiveSection } from '@/hooks/useActiveSection'
-import { timeline } from '@/data/portfolioData'
+import { timeline, characterDialogue } from '@/data/portfolioData'
 import CharacterWatcher from '@/components/ui/CharacterWatcher'
 
 const SECTION_IDS = timeline.map((item) => item.target.replace('#', ''))
@@ -61,9 +61,12 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Cursor-tracking character */}
+        {/* Cursor-tracking character + section-aware speech bubble */}
         <div className="sidebar-character">
-          <CharacterWatcher />
+          <CharacterWatcher
+            activeId={activeId}
+            message={characterDialogue[activeId] ?? characterDialogue.hero}
+          />
         </div>
       </aside>
     </>
@@ -71,3 +74,4 @@ function Navbar() {
 }
 
 export default Navbar
+

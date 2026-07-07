@@ -109,7 +109,7 @@
 /* ---- Sidebar character (HD image + SVG pupil overlay) ---- */
 .sidebar-character {
   margin-top: auto;
-  padding-top: 1.5rem;
+  padding-top: 1.75rem;
   display: flex;
   justify-content: center;
   border-top: 1px solid #1e2029;
@@ -117,8 +117,8 @@
 
 .character-watcher {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 190px;
+  height: 190px;
   background: transparent;
   flex-shrink: 0;
   transition: transform 0.2s;
@@ -160,8 +160,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* ---- Mobile hamburger button -------------------------- */
@@ -202,10 +207,12 @@
 .sidebar-toggle.is-open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .sidebar-toggle.is-open span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
+
 .sidebar-toggle.is-open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -213,5 +220,58 @@
 @media (min-width: 992px) {
   .sidebar-toggle {
     display: none;
+  }
+}
+
+/* ---- Character speech bubble -------------------------- */
+.character-bubble {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 185px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  color: #0c0d12;
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  animation: bubble-pop 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  pointer-events: none;
+  z-index: 10;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.character-bubble__tail {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #ffffff;
+}
+
+@keyframes bubble-pop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(6px) scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-bubble {
+    animation: none;
   }
 }

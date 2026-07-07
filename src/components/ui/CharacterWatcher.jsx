@@ -5,30 +5,20 @@ import characterImg from '@/assets/character-hd.jpg'
  * CharacterWatcher
  *
  * Single HD image (1024×1024, dark navy bg matching sidebar).
- * Container is SQUARE (160×160) so object-fit:contain fills it exactly
+ * Container is SQUARE so object-fit:contain fills it exactly
  * — zero letterboxing, SVG and image coordinates align 1:1.
  *
- * Eye positions were re-measured directly from the source pixels (scanned
- * character-hd.jpg for the two small bright sclera blobs in the head
- * region — each one is ~35×14px). Real centers:
+ * Eye positions were re-measured directly from the source pixels:
  *   Left eye  → x≈477px, y≈212px → 46.6%, 20.7%
  *   Right eye → x≈545px, y≈212px → 53.2%, 20.7%
  *
- * The old constants (44.4/56.2%, 26.9%) were spaced too far apart
- * horizontally and ~6% too low vertically, which put the animated pupils
- * down around the nose/mouth instead of on the eyes — that's the
- * "eyes outside the face" bug. The socket/iris/pupil sizes below are
- * also new: the real eyes are small and flat (~2.4:1), so they're drawn
- * as ellipses sized to actually fit inside them, instead of the old
- * circles that were bigger than the eyes themselves.
+ * @param {{ activeId: string, message: string }} props
  */
 
 const EYE_L = { x: 46.6, y: 20.7 }
 const EYE_R = { x: 53.2, y: 20.7 }
 
-// Socket = the clip region a pupil is allowed to render in. Kept a hair
-// smaller than the measured eye-white so the iris/pupil can never paint
-// outside the actual eye shape, no matter how far the cursor is.
+// Socket = the clip region a pupil is allowed to render in.
 const CLIP_RX = 1.5
 const CLIP_RY = 0.6
 
@@ -40,7 +30,7 @@ const PUPIL_RY = 0.24
 const MAX_PX = 0.6
 const MAX_PY = 0.25
 
-function CharacterWatcher() {
+function CharacterWatcher({ activeId, message }) {
   const ref = useRef(null)
   const [pupil, setPupil] = useState({ x: 0, y: 0 })
 
@@ -50,7 +40,7 @@ function CharacterWatcher() {
       if (!el) return
       const rect = el.getBoundingClientRect()
 
-      // Midpoint between both eyes in screen space (container is square 160×160)
+      // Midpoint between both eyes in screen space
       const eyeSX = rect.left + rect.width * 0.499  // halfway between 46.6 & 53.2
       const eyeSY = rect.top + rect.height * 0.207  // 20.7%
 
@@ -80,6 +70,16 @@ function CharacterWatcher() {
       aria-hidden="true"
       title="He's watching you 👀"
     >
+      {/* Speech bubble — key={activeId} causes React to remount the element
+          on every section change, which automatically replays the pop-in CSS
+          animation without any extra JS animation logic. */}
+      {message && (
+        <div key={activeId} className="character-bubble">
+          {message}
+          <span className="character-bubble__tail" />
+        </div>
+      )}
+
       {/* Body — square container means image fills without letterbox */}
       <img
         src={characterImg}
@@ -123,3 +123,4 @@ function CharacterWatcher() {
 }
 
 export default CharacterWatcher
+
