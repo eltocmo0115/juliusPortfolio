@@ -10,6 +10,12 @@
   border-bottom: 1px solid #eaeaea;
 }
 
+/* Give the hero container breathing room so content isn't flush-left */
+.hero-section .container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .eyebrow,
 .section-eyebrow {
   margin-bottom: 0.9rem;
@@ -81,12 +87,19 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  border: 1px solid #dee2e6;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  border: 3px solid #0c0d12;
+  box-shadow:
+    0 0 0 6px rgba(12, 13, 18, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.18),
+    0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-photo-wrap:hover .profile-photo {
+  box-shadow:
+    0 0 0 6px rgba(12, 13, 18, 0.12),
+    0 28px 60px rgba(0, 0, 0, 0.24),
+    0 10px 24px rgba(0, 0, 0, 0.16);
   transform: translateY(-2px);
 }
 
@@ -112,6 +125,11 @@
     padding-bottom: 4rem;
   }
 
+  .hero-section .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .hero-title {
     max-width: none;
   }
@@ -125,6 +143,11 @@
 @media (max-width: 575.98px) {
   .hero-section {
     padding-bottom: 3rem;
+  }
+
+  .hero-section .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .profile-photo {

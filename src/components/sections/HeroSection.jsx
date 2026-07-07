@@ -3,7 +3,7 @@ import { profile, programmingSkills, softwareProjects, capstoneProject } from '@
 import { buildCvLines } from '@/utils/pdfUtils'
 import { usePdfUrl } from '@/hooks/usePdfUrl'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
-import heroImg from '@/assets/hero.png'
+import heroImg from '@/assets/hero.jpg'
 
 /**
  * Hero section — name, role, CTA buttons, focus chips, and a profile photo.
