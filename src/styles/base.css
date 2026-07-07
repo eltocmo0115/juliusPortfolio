@@ -57,3 +57,21 @@ img {
 .skip-link:focus {
   top: 1rem;
 }
+
+/* ---- Custom scrollbar — light theme ------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4d4;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
