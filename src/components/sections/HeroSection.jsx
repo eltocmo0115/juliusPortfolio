@@ -71,7 +71,7 @@ function HeroSection() {
             <div className="hero-socials mt-4">
               <a
                 className="hero-social-link"
-                href="https://github.com/"
+                href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
@@ -81,7 +81,7 @@ function HeroSection() {
               </a>
               <a
                 className="hero-social-link"
-                href="https://linkedin.com/in/"
+                href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"

@@ -5,6 +5,9 @@ export const profile = {
     'A clean portfolio built with Bootstrap for presenting school projects, technical growth, and capstone work in one place.',
   location: 'Philippines',
   email: 'your.email@example.com',
+  /** Replace with your real profile URLs */
+  github:   'https://github.com/',
+  linkedin: 'https://linkedin.com/in/',
   focus: ['Bootstrap', 'React', 'Clean Architecture', 'UI Systems'],
   /** Replace with your actual photo — drop any image into src/assets/ and update this path */
   photo: null,
