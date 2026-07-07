@@ -1,0 +1,39 @@
+/* =========================================================
+   CONTENT SECTIONS — shared section wrappers and headings
+   ========================================================= */
+
+.content-section {
+  padding: 5rem 0;
+  background: #f4f7fb;
+}
+
+.content-section--soft {
+  background:
+    radial-gradient(circle at top, rgba(23, 70, 162, 0.06), transparent 34%),
+    #eef3fb;
+}
+
+.section-heading {
+  max-width: 44rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin-bottom: 0.85rem;
+  color: #0d1729;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.section-description {
+  margin-bottom: 0;
+  color: #5b667d;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
