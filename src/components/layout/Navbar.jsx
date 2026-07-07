@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useActiveSection } from '@/hooks/useActiveSection'
-import { timeline, profile } from '@/data/portfolioData'
+import { timeline } from '@/data/portfolioData'
+import CharacterWatcher from '@/components/ui/CharacterWatcher'
 
 const SECTION_IDS = timeline.map((item) => item.target.replace('#', ''))
 
@@ -60,10 +61,9 @@ function Navbar() {
           </ul>
         </nav>
 
-        {/* Footer info */}
-        <div className="sidebar-footer">
-          <p className="sidebar-footer__name">{profile.name}</p>
-          <p className="sidebar-footer__role">{profile.role}</p>
+        {/* Cursor-tracking character */}
+        <div className="sidebar-character">
+          <CharacterWatcher />
         </div>
       </aside>
     </>

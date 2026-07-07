@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
