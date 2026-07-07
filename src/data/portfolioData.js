@@ -12,7 +12,7 @@ export const profile = {
 
 /** Section-aware dialogue lines for the sidebar character speech bubble. */
 export const characterDialogue = {
-  hero:         "Hey! I'm Julius. Scroll down to see what I've built.",
+  hero:         "That's me! 👋 Scroll down to see what I've built.",
   skills:       'These are the tools I use daily.',
   certificates: "Proof I don't just say I know this stuff.",
   seminars:     'Always learning something new.',
