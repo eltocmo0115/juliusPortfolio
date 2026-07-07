@@ -116,7 +116,7 @@ export const softwareProjects = [
 ]
 
 export const capstoneProject = {
-  title: 'Air Alert: Mobile-Based Small-Scale Industry Indoor Air Pollutant Identification and Monitoring Application with Alert Notification Using Microcontroller Devices',
+  title: 'Air Alert',
   machineProblem:
     'Campus resources, requests, and records were fragmented across multiple manual processes.',
   features: [

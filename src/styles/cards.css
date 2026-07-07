@@ -25,21 +25,24 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
 }
 
-.skill-percent {
-  font-weight: 700;
+.skill-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  border-radius: 0.5rem;
   color: #212529;
+  background-color: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  font-size: 1.15rem;
 }
 
-.skill-progress {
-  height: 0.5rem;
-  border-radius: 999px;
-  background: #e9ecef;
-}
-
-.skill-progress .progress-bar {
-  border-radius: 999px;
-  background: #212529;
-  transition: width 0.8s ease;
+.skill-level-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6c757d;
 }
 
 /* ---- List card (certificates) -------------------------- */
