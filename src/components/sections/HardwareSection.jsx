@@ -16,12 +16,12 @@ function HardwareSection() {
           description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
-          {hardwareUsed.map((item, index) => (
+          {hardwareUsed.map((item) => (
             <div className="col-sm-6 col-lg-4" key={item.id}>
               <div className="hardware-card card border-0 shadow-sm h-100">
                 <div className="card-body p-4">
-                  <div className="hardware-card__index" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
+                  <div className="hardware-card__icon" aria-hidden="true">
+                    <i className="bi bi-cpu" />
                   </div>
                   <p className="mb-0 fw-semibold">{item.label}</p>
                 </div>

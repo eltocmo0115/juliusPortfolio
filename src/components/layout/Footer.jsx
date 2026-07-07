@@ -20,9 +20,9 @@ function Footer() {
       <div className="container">
         <div className="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
           <div>
-            <p className="h5 fw-bold mb-1">{profile.name}</p>
+            <p className="h5 fw-bold mb-1"></p>
             <p className="mb-0 text-secondary">
-              Portfolio site built with React, Bootstrap, and a clean architecture structure.
+
             </p>
           </div>
           <div className="d-flex flex-wrap gap-2">

@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-// Vendor (Bootstrap CSS + JS + Icons — loaded from local vendor files)
-import './assets/Craftivo/assets/vendor/bootstrap/css/bootstrap.min.css'
-import './assets/Craftivo/assets/vendor/bootstrap-icons/bootstrap-icons.css'
-import './assets/Craftivo/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'
+// Vendor (Bootstrap CSS + JS + Icons — from npm)
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 // Global styles
 import './styles/base.css'

@@ -16,13 +16,13 @@ function SeminarsSection() {
           description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
-          {seminars.map((seminar, index) => (
+          {seminars.map((seminar) => (
             <div className="col-lg-6" key={seminar.id}>
               <div className="seminar-card card border-0 shadow-sm h-100">
                 <div className="card-body p-4">
                   <div className="d-flex gap-3 align-items-start">
-                    <div className="seminar-card__number" aria-hidden="true">
-                      {String(index + 1).padStart(2, '0')}
+                    <div className="seminar-card__icon" aria-hidden="true">
+                      <i className="bi bi-journal-text" />
                     </div>
                     <div>
                       <h3 className="h5 fw-bold mb-0">{seminar.label}</h3>

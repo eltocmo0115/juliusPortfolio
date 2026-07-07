@@ -15,7 +15,7 @@ function HeroSection() {
     [],
   )
   const cvPdfUrl = usePdfUrl(cvLines)
-  const textRef  = useScrollAnimation({ threshold: 0.1 })
+  const textRef = useScrollAnimation({ threshold: 0.1 })
   const photoRef = useScrollAnimation({ threshold: 0.1 })
 
   const avatarSrc = profile.photo ?? heroImg
@@ -35,7 +35,7 @@ function HeroSection() {
             {/* Status indicator */}
             <div className="hero-status mb-3">
               <span className="hero-status__dot" aria-hidden="true" />
-              Open to internship opportunities
+              Open to Job opportunities
             </div>
 
             <h1 className="hero-title">{profile.name}</h1>
@@ -111,7 +111,7 @@ function HeroSection() {
               />
               {/* Location tag sits cleanly below the photo */}
               <div className="profile-photo__location">
-                <span aria-hidden="true">📍</span>
+                <i className="bi bi-geo-alt" aria-hidden="true" />
                 {profile.location}
               </div>
             </div>

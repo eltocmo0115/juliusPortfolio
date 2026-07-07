@@ -82,17 +82,19 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
 }
 
-.seminar-card__number {
+/* Icon chip replaces numbered circle — matches list-card__icon style */
+.seminar-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 0.5rem;
-  color: #ffffff;
-  font-weight: 700;
-  background: #212529;
+  color: #495057;
+  background-color: #f1f3f5;
+  border: 1px solid #e1e4e8;
   flex-shrink: 0;
+  font-size: 1rem;
 }
 
 /* ---- Project card --------------------------------------- */
@@ -235,7 +237,8 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
 }
 
-.hardware-card__index {
+/* Icon chip replaces numbered circle */
+.hardware-card__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -243,7 +246,8 @@
   height: 2.2rem;
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
-  color: #ffffff;
-  font-weight: 700;
-  background: #212529;
+  color: #495057;
+  background-color: #f1f3f5;
+  border: 1px solid #e1e4e8;
+  font-size: 1rem;
 }
