@@ -36,11 +36,6 @@ function Navbar() {
       )}
 
       <aside className={`site-sidebar${open ? ' is-open' : ''}`} aria-label="Main navigation">
-        {/* Brand */}
-        <div className="sidebar-brand">
-          <span className="brand-mark" aria-hidden="true">C</span>
-          <span className="sidebar-brand__name">Craftivo</span>
-        </div>
 
         {/* Nav links */}
         <nav>

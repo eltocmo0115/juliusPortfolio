@@ -13,7 +13,7 @@ function SeminarsSection() {
         <SectionHeading
           eyebrow="Seminars"
           title="Talks and Learning Sessions"
-          description="Seminars, workshops, and school events that contributed to the portfolio journey."
+          description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
           {seminars.map((seminar, index) => (

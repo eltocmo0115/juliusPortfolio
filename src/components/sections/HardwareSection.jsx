@@ -13,7 +13,7 @@ function HardwareSection() {
         <SectionHeading
           eyebrow="Hardware Used"
           title="Devices and Development Equipment"
-          description="A simple summary of the hardware used while creating, testing, and presenting the portfolio."
+          description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
           {hardwareUsed.map((item, index) => (

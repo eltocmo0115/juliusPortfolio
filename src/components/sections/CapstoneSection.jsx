@@ -7,7 +7,7 @@ import { capstoneProject } from '@/data/portfolioData'
  * field structure as ProjectCard but with a larger, dedicated layout.
  */
 function CapstoneSection() {
-  const leftRef  = useScrollAnimation({ threshold: 0.08 })
+  const leftRef = useScrollAnimation({ threshold: 0.08 })
   const rightRef = useScrollAnimation({ threshold: 0.08 })
 
   return (
@@ -16,7 +16,7 @@ function CapstoneSection() {
         <SectionHeading
           eyebrow="Capstone Project"
           title={capstoneProject.title}
-          description="The final-year project — same structure as the earlier software entries with a dedicated full-width layout."
+          description=""
         />
 
         <div className="row g-4 align-items-stretch">

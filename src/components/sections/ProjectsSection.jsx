@@ -15,8 +15,8 @@ function ProjectsSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Software Developed"
-          title="Projects from 1st Year to 4th Year"
-          description="Each project card includes the machine problem, features, screenshots, and the software used."
+          title="Projects"
+          description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
           {softwareProjects.map((project, index) => (

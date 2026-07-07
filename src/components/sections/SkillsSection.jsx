@@ -13,7 +13,7 @@ function SkillsSection() {
         <SectionHeading
           eyebrow="Programming Skills"
           title="Technical Skills"
-          description="A concise view of the core tools used across classwork, projects, and the capstone build."
+          description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
           {programmingSkills.map((skill) => (

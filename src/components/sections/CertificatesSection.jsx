@@ -13,7 +13,7 @@ function CertificatesSection() {
         <SectionHeading
           eyebrow="Certificates"
           title="Training and Certifications"
-          description="Courses and certifications completed throughout the IT program."
+          description=""
         />
         <div className="row g-4 animate-on-scroll" ref={ref}>
           {certificates.map((cert) => (

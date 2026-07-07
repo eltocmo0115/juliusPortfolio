@@ -24,40 +24,7 @@ function App() {
         <main id="top">
           <HeroSection />
 
-          {/* Info band */}
-          <section className="section-band" aria-hidden="true">
-            <div className="container">
-              <div className="row g-4">
-                <div className="col-md-4">
-                  <div className="info-tile">
-                    <i className="bi bi-layers-fill" />
-                    <div>
-                      <p>Architecture</p>
-                      <strong>Clean, reusable, data-driven components</strong>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="info-tile">
-                    <i className="bi bi-phone-fill" />
-                    <div>
-                      <p>Responsive</p>
-                      <strong>Optimized for desktop, tablet, and mobile</strong>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <div className="info-tile">
-                    <i className="bi bi-file-earmark-arrow-down-fill" />
-                    <div>
-                      <p>CV Download</p>
-                      <strong>One click PDF export for reviewers</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
 
           <SkillsSection />
           <CertificatesSection />

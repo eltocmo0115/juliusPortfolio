@@ -6,7 +6,10 @@ export const profile = {
   location: 'Philippines',
   email: 'your.email@example.com',
   focus: ['Bootstrap', 'React', 'Clean Architecture', 'UI Systems'],
+  /** Replace with your actual photo — drop any image into src/assets/ and update this path */
+  photo: null,
 }
+
 
 export const programmingSkills = [
   { id: 'html-css', name: 'HTML / CSS', level: 95 },
