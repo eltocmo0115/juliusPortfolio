@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 /**
  * Attaches an IntersectionObserver to the returned `ref`.
  * When the element enters the viewport the `visible` class is added,
- * triggering the CSS entrance animation defined in animations.css.
+ * triggering the CSS entrance animation defined in base.css.
  *
  * @param {{ threshold?: number, rootMargin?: string }} options
  * @returns {React.RefObject}
@@ -14,6 +14,11 @@ export function useScrollAnimation(options = {}) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
+
+    if (!('IntersectionObserver' in window)) {
+      el.classList.add('visible')
+      return
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

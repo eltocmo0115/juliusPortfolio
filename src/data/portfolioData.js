@@ -1,167 +1,86 @@
 export const profile = {
   name: 'Julius T. Piñon',
-  role: 'Information Technology Student and Software Developer',
+  shortName: 'Julius',
+  role: 'IT student & software developer',
+  headline: 'I build practical web and Android experiences.',
   subtitle:
-    'A clean portfolio built with Bootstrap for presenting school projects, technical growth, and capstone work in one place.',
+    'My work spans PHP and CodeIgniter systems, Kotlin and Jetpack Compose interfaces, and the thoughtful workflows that connect people to technology.',
   location: 'Philippines',
-  email: 'your.email@example.com',
-  /** Replace with your real profile URLs */
-  github:   'https://github.com/',
-  linkedin: 'https://linkedin.com/in/',
-  focus: ['Bootstrap', 'React', 'Clean Architecture', 'UI Systems'],
-  /** Replace with your actual photo — drop any image into src/assets/ and update this path */
-  photo: null,
+  email: 'romarjulius@gmail.com',
+  github: 'https://github.com/romar0112',
+  linkedin: 'https://www.linkedin.com/in/julius-romar-pi%C3%B1on-715495328',
+  credly: 'https://www.credly.com/users/julius-romar-pinon',
+  availability: 'Open to opportunities and junior roles',
 }
 
-/** Section-aware dialogue lines for the sidebar character speech bubble. */
-export const characterDialogue = {
-  hero:         "That's me! 👋 Scroll down to see what I've built.",
-  skills:       'These are the tools I use daily.',
-  certificates: "Proof I don't just say I know this stuff.",
-  seminars:     'Always learning something new.',
-  projects:     "Here's what I've actually shipped.",
-  capstone:     'This one took months. Worth it.',
-  hardware:     'Yes, I get my hands dirty with hardware too.',
-}
-
+export const stats = [
+  { value: '02', label: 'public projects' },
+  { value: 'Web + Android', label: 'current focus' },
+  { value: 'PH', label: 'based in' },
+]
 
 export const programmingSkills = [
-  { id: 'html-css', name: 'HTML / CSS', level: 95 },
-  { id: 'javascript', name: 'JavaScript', level: 88 },
-  { id: 'react', name: 'React', level: 85 },
-  { id: 'bootstrap', name: 'Bootstrap', level: 92 },
-  { id: 'php', name: 'PHP', level: 80 },
-  { id: 'mysql', name: 'MySQL', level: 82 },
-  { id: 'figma', name: 'Figma', level: 74 },
-]
-
-export const certificates = [
-  { id: 'rwd', label: 'Responsive Web Design' },
-  { id: 'js', label: 'JavaScript Fundamentals' },
-  { id: 'db', label: 'Database Management' },
-  { id: 'sad', label: 'System Analysis and Design' },
-  { id: 'cloud', label: 'Cloud and Web Deployment' },
-]
-
-export const seminars = [
-  { id: 'web-trends', label: 'Web Development Trends and Best Practices' },
-  { id: 'uiux', label: 'UI / UX Design for Student Portfolios' },
-  { id: 'cybersec', label: 'Cybersecurity Awareness for Developers' },
-  { id: 'capstone-def', label: 'Capstone Project Defense Preparation' },
-]
-
-export const softwareProjects = [
-  {
-    id: '1st-year',
-    year: '1st Year',
-    title: 'Student Information Tracker',
-    machineProblem:
-      'Manual record keeping made student records slow to update and difficult to search.',
-    features: [
-      'Student profile registration',
-      'Search and filtering',
-      'Printable records',
-      'Basic CRUD workflow',
-    ],
-    screenshots: [
-      'Login and dashboard screen',
-      'Student form and table view',
-      'Search and print preview',
-    ],
-    softwareUsed: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-  },
-  {
-    id: '2nd-year',
-    year: '2nd Year',
-    title: 'Inventory and Borrowing System',
-    machineProblem:
-      'Borrowed equipment and stock items were tracked using spreadsheets and handwritten logs.',
-    features: [
-      'Item catalog and categories',
-      'Borrow and return workflow',
-      'Low-stock notifications',
-      'User roles and history logs',
-    ],
-    screenshots: [
-      'Inventory overview screen',
-      'Borrowing transaction form',
-      'Reports and logs screen',
-    ],
-    softwareUsed: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-  },
-  {
-    id: '3rd-year',
-    year: '3rd Year',
-    title: 'Clinic Appointment and Records Platform',
-    machineProblem:
-      'Clinic appointments and patient records needed a simple web-based workflow for faster scheduling.',
-    features: [
-      'Appointment scheduling',
-      'Patient record management',
-      'Status updates and notifications',
-      'Admin dashboard analytics',
-    ],
-    screenshots: [
-      'Patient dashboard screen',
-      'Calendar and appointment form',
-      'Records and analytics panel',
-    ],
-    softwareUsed: ['Laravel', 'MySQL', 'Bootstrap', 'Chart.js'],
-  },
-  {
-    id: '4th-year',
-    year: '4th Year',
-    title: 'Capstone Support System',
-    machineProblem:
-      'The final-year project required a reliable system with cleaner structure, better navigation, and presentation-ready screens.',
-    features: [
-      'Role-based access',
-      'Responsive dashboard',
-      'Automated summaries',
-      'Export-ready reports',
-    ],
-    screenshots: [
-      'Landing page and login flow',
-      'Admin dashboard screen',
-      'Reports and settings page',
-    ],
-    softwareUsed: ['React', 'Bootstrap', 'Node', 'REST APIs'],
-  },
+  { id: 'php', name: 'PHP', group: 'Web', mark: 'PHP' },
+  { id: 'codeigniter', name: 'CodeIgniter', group: 'Web', mark: 'CI' },
+  { id: 'javascript', name: 'JavaScript', group: 'Web', mark: 'JS' },
+  { id: 'react', name: 'React', group: 'Web', mark: 'R' },
+  { id: 'html-css', name: 'HTML & CSS', group: 'Web', mark: '</>' },
+  { id: 'kotlin', name: 'Kotlin', group: 'Android', mark: 'KT' },
+  { id: 'compose', name: 'Jetpack Compose', group: 'Android', mark: 'JC' },
+  { id: 'mysql', name: 'MySQL', group: 'Data', mark: 'SQL' },
 ]
 
 export const capstoneProject = {
+  id: 'air-alert',
+  index: '01',
+  year: 'Capstone · Android prototype',
   title: 'Air Alert',
-  machineProblem:
-    'Campus resources, requests, and records were fragmented across multiple manual processes.',
-  features: [
-    'Centralized request handling',
-    'User-friendly dashboard',
-    'Approval workflow',
-    'Searchable records and logs',
-    'Mobile-responsive interface',
-  ],
-  screenshots: [
-    'Public landing page and login',
-    'Role-based dashboard overview',
-    'Request and approval workflow',
-    'Reports, history, and export screen',
-  ],
-  softwareUsed: ['React', 'Bootstrap', 'Node.js', 'Express', 'MySQL'],
+  summary:
+    'An Android interface prototype for identifying and monitoring indoor air pollutants in small-scale industry settings.',
+  outcome:
+    'Built the multi-screen experience for pollutant readings, sensor details, logs, alert states, and account navigation.',
+  features: ['Pollutant dashboard', 'Sensor detail views', 'Alert & log screens', 'Account flow'],
+  softwareUsed: ['Kotlin', 'Jetpack Compose', 'Material 3', 'Navigation Compose'],
+  sourceUrl: 'https://github.com/romar0112/AirAlert',
+  sourceLabel: 'View Android source',
+  accent: 'lime',
+  visual: 'mobile',
 }
 
-export const hardwareUsed = [
-  { id: 'laptop', label: 'Laptop or desktop computer for development' },
-  { id: 'android', label: 'Android phone for mobile responsiveness testing' },
-  { id: 'peripherals', label: 'External mouse and keyboard' },
-  { id: 'network', label: 'Wi-Fi or LAN connection for local testing and deployment' },
-  { id: 'printer', label: 'Printer or PDF viewer for report checking' },
+export const softwareProjects = [
+  {
+    id: 'electric-billing',
+    index: '02',
+    year: 'Web application · Public source',
+    title: 'Electric Billing',
+    summary:
+      'A database-backed billing application for computing electricity charges and organizing client billing records.',
+    outcome:
+      'Implemented authenticated user and admin flows, billing computation, client records, role-protected routes, history, and audit logs.',
+    features: ['Billing computation', 'Role-based access', 'Client records', 'Audit history'],
+    softwareUsed: ['PHP 8.2', 'CodeIgniter 4', 'MySQL', 'JavaScript'],
+    sourceUrl: 'https://github.com/romar0112/electric-billing',
+    sourceLabel: 'View web source',
+    accent: 'cyan',
+    visual: 'dashboard',
+  },
+]
+
+export const learning = [
+  'Responsive Web Design',
+  'JavaScript Fundamentals',
+  'Database Management',
+  'System Analysis & Design',
+  'Cloud & Web Deployment',
+  'UI/UX Design',
+  'Cybersecurity Awareness',
 ]
 
 export const timeline = [
-  { label: 'Programming Skills', target: '#skills' },
-  { label: 'Certificates', target: '#certificates' },
-  { label: 'Seminars', target: '#seminars' },
-  { label: 'Projects', target: '#projects' },
-  { label: 'Capstone', target: '#capstone' },
-  { label: 'Hardware', target: '#hardware' },
+  { label: 'About', target: '#about' },
+  { label: 'Skills', target: '#skills' },
+  { label: 'Work', target: '#projects' },
+  { label: 'Credentials', target: '#credentials' },
+  { label: 'Learning', target: '#learning' },
+  { label: 'Contact', target: '#contact' },
 ]

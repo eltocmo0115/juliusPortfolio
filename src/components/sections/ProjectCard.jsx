@@ -1,65 +1,58 @@
-/**
- * ProjectCard — displays a single software project entry.
- *
- * @param {{ project: object }} props
- */
-function ProjectCard({ project }) {
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+
+function ProjectPreview({ type }) {
+  if (type === 'mobile') {
+    return (
+      <div className="mobile-preview" aria-hidden="true">
+        <div className="phone phone-back"><span>CO</span><strong>Good</strong></div>
+        <div className="phone phone-front">
+          <div className="phone-speaker" />
+          <small>Air quality</small>
+          <strong>PM2.5</strong>
+          <div className="air-reading">12<sup>µg</sup></div>
+          <div className="air-chart"><i /><i /><i /><i /><i /><i /></div>
+        </div>
+      </div>
+    )
+  }
+
   return (
-    <article className="project-card card border-0 shadow-sm h-100">
-      <div className="project-card__bar" aria-hidden="true" />
-      <div className="card-body p-4">
-        {/* Header */}
-        <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-          <span className="badge text-bg-dark-subtle project-card__year">{project.year}</span>
-          <span className="text-uppercase small text-secondary fw-semibold">Portfolio Record</span>
+    <div className="mock-window" aria-hidden="true">
+      <div className="mock-bar"><span /><span /><span /><small>Billing workspace</small></div>
+      <div className="billing-preview">
+        <aside><b>EB</b><i /><i /><i /></aside>
+        <div className="billing-content">
+          <small>Overview</small>
+          <strong>Billing activity</strong>
+          <div className="billing-metrics"><i /><i /><i /></div>
+          <div className="billing-table"><span /><span /><span /></div>
         </div>
+      </div>
+    </div>
+  )
+}
 
-        <h3 className="h4 fw-bold mb-3">{project.title}</h3>
-
-        {/* Machine Problem */}
-        <div className="project-card__block">
-          <p className="project-card__label">Machine Problem</p>
-          <p className="project-card__text">{project.machineProblem}</p>
-        </div>
-
-        {/* Features */}
-        <div className="project-card__block">
-          <p className="project-card__label">Discussion of the Features</p>
-          <ul className="project-card__list">
-            {project.features.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Screenshots */}
-        <div className="project-card__block">
-          <p className="project-card__label">Screenshots of the GUI</p>
-          <div className="screenshot-grid">
-            {project.screenshots.map((shot) => (
-              <div key={shot} className="screenshot-frame">
-                <div className="screenshot-frame__window" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <p>{shot}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Software badges */}
-        <div className="project-card__block mb-0">
-          <p className="project-card__label">Software Used</p>
-          <div className="d-flex flex-wrap gap-2">
-            {project.softwareUsed.map((tool) => (
-              <span key={tool} className="badge rounded-pill text-bg-light border">
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
+function ProjectCard({ project }) {
+  const ref = useScrollAnimation({ threshold: 0.08 })
+  return (
+    <article className={`project-row project-${project.accent} animate-on-scroll`} ref={ref}>
+      <div className="project-meta"><span>{project.index}</span><p>{project.year}</p></div>
+      <div className="project-body">
+        <h3>{project.title}</h3>
+        <p className="project-summary">{project.summary}</p>
+        <p className="project-outcome"><strong>What I built</strong>{project.outcome}</p>
+        <ul className="feature-list" aria-label={`${project.title} features`}>
+          {project.features.map((feature) => <li key={feature}>{feature}</li>)}
+        </ul>
+        <a className="project-link" href={project.sourceUrl} target="_blank" rel="noreferrer">
+          {project.sourceLabel} <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div className="project-visual">
+        <ProjectPreview type={project.visual} />
+        <ul className="tech-list" aria-label={`${project.title} technologies`}>
+          {project.softwareUsed.map((tool) => <li key={tool}>{tool}</li>)}
+        </ul>
       </div>
     </article>
   )

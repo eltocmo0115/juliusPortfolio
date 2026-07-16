@@ -1,132 +1,72 @@
-import { useMemo } from 'react'
-import { profile, programmingSkills, softwareProjects, capstoneProject } from '@/data/portfolioData'
-import { buildCvLines } from '@/utils/pdfUtils'
-import { usePdfUrl } from '@/hooks/usePdfUrl'
-import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import heroImg from '@/assets/hero.jpg'
+import { profile, stats } from '@/data/portfolioData'
 
-/**
- * Hero section — name, role, CTA buttons, social links, status tag,
- * profile photo with repositioned location badge, and scroll indicator.
- */
 function HeroSection() {
-  const cvLines = useMemo(
-    () => buildCvLines({ profile, programmingSkills, softwareProjects, capstoneProject }),
-    [],
-  )
-  const cvPdfUrl = usePdfUrl(cvLines)
-  const textRef = useScrollAnimation({ threshold: 0.1 })
-  const photoRef = useScrollAnimation({ threshold: 0.1 })
-
-  const avatarSrc = profile.photo ?? heroImg
-
   return (
-    <section className="hero-section" id="hero">
-      {/* Subtle decorative blobs for background depth */}
-      <div className="hero-blob hero-blob--a" aria-hidden="true" />
-      <div className="hero-blob hero-blob--b" aria-hidden="true" />
+    <section className="hero" id="hero">
+      <div className="hero-grid" aria-hidden="true" />
+      <div className="hero-orb hero-orb-one" aria-hidden="true" />
+      <div className="hero-orb hero-orb-two" aria-hidden="true" />
 
-      <div className="container position-relative">
-        <div className="row align-items-center g-5">
+      <div className="page-wrap hero-layout">
+        <div className="hero-copy-block">
+          <p className="availability"><span /> {profile.availability}</p>
+          <h1>{profile.headline}</h1>
+          <p className="hero-intro">Hi, I’m {profile.name}—{profile.subtitle}</p>
 
-          {/* Left: text block */}
-          <div className="col-lg-7 animate-on-scroll" ref={textRef}>
-
-            {/* Status indicator */}
-            <div className="hero-status mb-3">
-              <span className="hero-status__dot" aria-hidden="true" />
-              Open to Job opportunities
-            </div>
-
-            <h1 className="hero-title">{profile.name}</h1>
-            <p className="hero-lead">{profile.role}</p>
-            <p className="hero-copy">{profile.subtitle}</p>
-
-            {/* CTA buttons — Primary > Secondary > Tertiary */}
-            <div className="d-flex flex-wrap gap-3 mt-4">
-              <a
-                className="btn hero-btn-primary btn-lg px-4"
-                href={cvPdfUrl}
-                download="Curriculum-Vitae.pdf"
-                id="hero-download-cv"
-              >
-                <i className="bi bi-download me-2" aria-hidden="true" />
-                Download CV
-              </a>
-              <a className="btn hero-btn-secondary btn-lg px-4" href="#projects" id="hero-view-projects">
-                <i className="bi bi-grid me-2" aria-hidden="true" />
-                View Projects
-              </a>
-              <a
-                className="btn hero-btn-tertiary btn-lg px-4"
-                href={`mailto:${profile.email}`}
-                id="hero-contact"
-              >
-                <i className="bi bi-envelope me-2" aria-hidden="true" />
-                Contact
-              </a>
-            </div>
-
-            {/* Social links row */}
-            <div className="hero-socials mt-4">
-              <a
-                className="hero-social-link"
-                href={profile.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub profile"
-                id="hero-github"
-              >
-                <i className="bi bi-github" aria-hidden="true" />
-              </a>
-              <a
-                className="hero-social-link"
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn profile"
-                id="hero-linkedin"
-              >
-                <i className="bi bi-linkedin" aria-hidden="true" />
-              </a>
-              <a
-                className="hero-social-link"
-                href={`mailto:${profile.email}`}
-                aria-label="Send email"
-                id="hero-email"
-              >
-                <i className="bi bi-envelope-fill" aria-hidden="true" />
-              </a>
-            </div>
-
+          <div className="hero-actions">
+            <a className="button button-primary" href="#projects">
+              Explore my work <span aria-hidden="true">↘</span>
+            </a>
+            <a
+              className="button button-secondary button-cv"
+              href="/documents/julius-romar-pinon-cv.pdf"
+              download="Julius-Romar-Pinon-CV.pdf"
+            >
+              Download CV <span aria-hidden="true">↓</span>
+            </a>
+            <a
+              className="button button-secondary"
+              href="/documents/it-practicum-final-report.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Final Report <span aria-hidden="true">↗</span>
+            </a>
+            <a className="text-link" href={`mailto:${profile.email}`}>
+              {profile.email} <span aria-hidden="true">↗</span>
+            </a>
           </div>
 
-          {/* Right: profile photo */}
-          <div className="col-lg-5 d-flex justify-content-center animate-on-scroll" ref={photoRef}>
-            <div className="profile-photo-wrap">
-              <img
-                src={avatarSrc}
-                alt={`${profile.name} — profile photo`}
-                className="profile-photo"
-              />
-              {/* Location tag sits cleanly below the photo */}
-              <div className="profile-photo__location">
-                <i className="bi bi-geo-alt" aria-hidden="true" />
-                {profile.location}
+          <dl className="hero-stats">
+            {stats.map((stat) => (
+              <div key={stat.label}>
+                <dt>{stat.value}</dt>
+                <dd>{stat.label}</dd>
               </div>
+            ))}
+          </dl>
+        </div>
+
+        <div className="portrait-stage">
+          <div className="portrait-card">
+            <img
+              src={heroImg}
+              alt={`Portrait of ${profile.name}`}
+              width="938"
+              height="938"
+              decoding="async"
+              fetchPriority="high"
+            />
+            <div className="portrait-caption">
+              <span><span aria-hidden="true">⌖</span> {profile.location}</span>
+              <span className="portrait-status">Available</span>
             </div>
           </div>
-
+          <span className="code-note code-note-top">build → learn → improve</span>
+          <span className="code-note code-note-bottom">{profile.role}</span>
         </div>
       </div>
-
-      {/* Scroll-down indicator */}
-      <a className="hero-scroll-indicator" href="#skills" aria-label="Scroll to skills">
-        <span className="hero-scroll-indicator__label">Scroll</span>
-        <span className="hero-scroll-indicator__arrow" aria-hidden="true">
-          <i className="bi bi-chevron-down" />
-        </span>
-      </a>
     </section>
   )
 }

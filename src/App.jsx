@@ -1,41 +1,25 @@
-import Navbar              from '@/components/layout/Navbar'
-import Footer              from '@/components/layout/Footer'
-import HeroSection         from '@/components/sections/HeroSection'
-import SkillsSection       from '@/components/sections/SkillsSection'
-import CertificatesSection from '@/components/sections/CertificatesSection'
-import SeminarsSection     from '@/components/sections/SeminarsSection'
-import ProjectsSection     from '@/components/sections/ProjectsSection'
-import CapstoneSection     from '@/components/sections/CapstoneSection'
-import HardwareSection     from '@/components/sections/HardwareSection'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import HeroSection from '@/components/sections/HeroSection'
+import AboutSection from '@/components/sections/AboutSection'
+import SkillsSection from '@/components/sections/SkillsSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
+import CredentialsSection from '@/components/sections/CredentialsSection'
+import LearningSection from '@/components/sections/LearningSection'
 
-/**
- * App — layout shell.
- * On desktop: sidebar (fixed left) + scrollable content column on the right.
- * On mobile:  sidebar slides in as a drawer over the content.
- */
 function App() {
   return (
-    <div className="portfolio-shell">
-      {/* Fixed sidebar navigation */}
+    <div className="site-shell">
       <Navbar />
-
-      {/* Scrollable content — offset right by sidebar width on desktop */}
-      <div className="content-column">
-        <main id="top">
-          <HeroSection />
-
-
-
-          <SkillsSection />
-          <CertificatesSection />
-          <SeminarsSection />
-          <ProjectsSection />
-          <CapstoneSection />
-          <HardwareSection />
-        </main>
-
-        <Footer />
-      </div>
+      <main id="top">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <CredentialsSection />
+        <LearningSection />
+      </main>
+      <Footer />
     </div>
   )
 }
