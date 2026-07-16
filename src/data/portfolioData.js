@@ -10,7 +10,7 @@ export const profile = {
   github: 'https://github.com/romar0112',
   linkedin: 'https://www.linkedin.com/in/julius-romar-pi%C3%B1on-715495328',
   credly: 'https://www.credly.com/users/julius-romar-pinon',
-  availability: 'Open to opportunities and junior roles',
+  availability: 'Open to Job Opportunities',
 }
 
 export const stats = [
