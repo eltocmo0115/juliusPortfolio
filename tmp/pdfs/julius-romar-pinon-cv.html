@@ -18,12 +18,12 @@
     .summary { position: absolute; z-index: 1; right: 16mm; bottom: 11mm; width: 78mm; margin: 0; color: #c9c9c3; font-size: 8.2pt; line-height: 1.5; }
     .content { display: grid; grid-template-columns: 1.62fr .78fr; height: 224mm; }
     .main { padding: 10mm 10mm 10mm 16mm; }
-    .side { padding: 10mm 16mm 10mm 9mm; background: #fffef9; border-left: .3mm solid rgba(20,20,20,.16); }
-    .section { margin-bottom: 7mm; }
+    .side { padding: 8mm 16mm 8mm 9mm; background: #fffef9; border-left: .3mm solid rgba(20,20,20,.16); }
+    .section { margin-bottom: 5mm; }
     .section:last-child { margin-bottom: 0; }
     .section-title { display: flex; align-items: center; gap: 3mm; margin: 0 0 4mm; font: 700 7.5pt/1 Consolas, monospace; letter-spacing: 1pt; text-transform: uppercase; }
     .section-title::before { content: ""; width: 7mm; height: 2.2mm; background: #d7ff43; border: .3mm solid #141414; }
-    .project { display: grid; grid-template-columns: 8mm 1fr; gap: 3mm; padding: 0 0 5mm; margin-bottom: 5mm; border-bottom: .3mm solid rgba(20,20,20,.16); }
+    .project { display: grid; grid-template-columns: 8mm 1fr; gap: 3mm; padding: 0 0 3.5mm; margin-bottom: 3.5mm; border-bottom: .3mm solid rgba(20,20,20,.16); }
     .project:last-child { padding-bottom: 0; margin-bottom: 0; border: 0; }
     .project-index { display: grid; place-items: center; width: 8mm; height: 8mm; border-radius: 50%; background: #141414; color: #d7ff43; font: 700 6.5pt/1 Consolas, monospace; }
     h2 { margin: 0 0 1.5mm; font-size: 14pt; line-height: 1.05; letter-spacing: -.35pt; }
@@ -36,17 +36,17 @@
     .credential-card strong { display: block; font-size: 8pt; line-height: 1.25; }
     .credential-card span { display: block; margin-top: 1.5mm; color: #696760; font: 600 6pt/1.3 Consolas, monospace; text-transform: uppercase; }
     .cloud-line { margin: 0; color: #45433f; font-size: 7.4pt; line-height: 1.5; }
-    .side-section { margin-bottom: 7mm; }
+    .side-section { margin-bottom: 4.5mm; }
     .side-section:last-child { margin-bottom: 0; }
-    .side h3 { margin: 0 0 3mm; font: 700 7.2pt/1 Consolas, monospace; letter-spacing: .9pt; text-transform: uppercase; }
-    .skill-group { margin-bottom: 3mm; }
+    .side h3 { margin: 0 0 2mm; font: 700 7.2pt/1 Consolas, monospace; letter-spacing: .9pt; text-transform: uppercase; }
+    .skill-group { margin-bottom: 2mm; }
     .skill-group strong { display: block; margin-bottom: 1mm; font-size: 7.8pt; }
     .skill-group p, .side-copy { margin: 0; color: #5b5954; font-size: 7.5pt; line-height: 1.5; }
     .timeline { margin: 0; padding: 0; list-style: none; border-top: .3mm solid #141414; }
-    .timeline li { padding: 2.8mm 0; border-bottom: .3mm solid rgba(20,20,20,.16); }
+    .timeline li { padding: 1.8mm 0; border-bottom: .3mm solid rgba(20,20,20,.16); }
     .timeline strong { display: block; font-size: 7.7pt; line-height: 1.25; }
     .timeline span { display: block; margin-top: 1mm; color: #696760; font: 600 5.8pt/1.3 Consolas, monospace; text-transform: uppercase; }
-    .links { display: grid; gap: 2mm; }
+    .links { display: grid; gap: 1mm; }
     .link { display: block; padding-bottom: 1.5mm; border-bottom: .3mm solid #141414; font-size: 7.1pt; font-weight: 700; overflow-wrap: anywhere; }
     .status { padding: 3mm; background: #d7ff43; border: .3mm solid #141414; }
     .status strong { display: block; font-size: 8pt; }
@@ -66,9 +66,22 @@
     <div class="content">
       <section class="main">
         <div class="section">
-          <p class="section-title">Selected projects</p>
+          <p class="section-title">Experience</p>
           <article class="project">
             <span class="project-index">01</span>
+            <div>
+              <h2>Information Technology Intern</h2>
+              <p class="meta">City Government of Biñan / ICTO / 2026</p>
+              <p>Maintained and optimized the official CodeIgniter 4 and MySQL city website, strengthened role-based access and data integrity, improved content tooling, and supported hardware, networking, and Tech4Ed workstation deployment.</p>
+              <div class="tags"><span class="tag">PHP</span><span class="tag">CodeIgniter 4</span><span class="tag">MySQL</span><span class="tag">IT Support</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section">
+          <p class="section-title">Selected projects</p>
+          <article class="project">
+            <span class="project-index">02</span>
             <div>
               <h2>Air Alert</h2>
               <p class="meta">Android prototype / Capstone</p>
@@ -77,7 +90,7 @@
             </div>
           </article>
           <article class="project">
-            <span class="project-index">02</span>
+            <span class="project-index">03</span>
             <div>
               <h2>Electric Billing</h2>
               <p class="meta">Web application / Public source</p>
@@ -102,15 +115,16 @@
       <aside class="side">
         <div class="side-section">
           <h3>Core skills</h3>
-          <div class="skill-group"><strong>Web</strong><p>PHP, CodeIgniter, JavaScript, React, HTML, CSS</p></div>
+          <div class="skill-group"><strong>Web</strong><p>PHP, CodeIgniter, JavaScript, TypeScript, React, Bootstrap, HTML, CSS</p></div>
+          <div class="skill-group"><strong>Application</strong><p>C#, ASP.NET Core, Entity Framework Core</p></div>
           <div class="skill-group"><strong>Android</strong><p>Kotlin, Jetpack Compose, Material 3</p></div>
-          <div class="skill-group"><strong>Data &amp; cloud</strong><p>MySQL, AWS foundations, Google Cloud fundamentals</p></div>
-          <div class="skill-group"><strong>Practice areas</strong><p>Responsive design, UI/UX, cybersecurity awareness, system analysis</p></div>
+          <div class="skill-group"><strong>Data &amp; tooling</strong><p>MySQL, SQLite, Git, GitHub, AWS and Google Cloud foundations</p></div>
+          <div class="skill-group"><strong>Practice areas</strong><p>Responsive design, UI/UX, system analysis, cybersecurity awareness, IT support</p></div>
         </div>
 
         <div class="side-section">
           <h3>Education</h3>
-          <p class="side-copy"><strong>Information Technology Student</strong><br>Philippines</p>
+          <p class="side-copy"><strong>Bachelor of Science in Information Technology</strong><br>Mapúa Malayan Colleges Laguna<br>College of Computer and Information Science<br>Academic Year 2025-2026</p>
         </div>
 
         <div class="side-section">

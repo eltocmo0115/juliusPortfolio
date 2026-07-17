@@ -37,12 +37,25 @@ export const programmingSkills = [
   { id: 'php', name: 'PHP', group: 'Web', mark: 'PHP' },
   { id: 'codeigniter', name: 'CodeIgniter', group: 'Web', mark: 'CI' },
   { id: 'javascript', name: 'JavaScript', group: 'Web', mark: 'JS' },
+  { id: 'typescript', name: 'TypeScript', group: 'Web', mark: 'TS' },
   { id: 'react', name: 'React', group: 'Web', mark: 'R' },
   { id: 'html-css', name: 'HTML & CSS', group: 'Web', mark: '</>' },
+  { id: 'bootstrap', name: 'Bootstrap', group: 'Web', mark: 'B' },
+  { id: 'csharp', name: 'C#', group: 'Application', mark: 'C#' },
+  { id: 'aspnet', name: 'ASP.NET Core', group: 'Web', mark: '.NET' },
   { id: 'kotlin', name: 'Kotlin', group: 'Android', mark: 'KT' },
   { id: 'compose', name: 'Jetpack Compose', group: 'Android', mark: 'JC' },
   { id: 'mysql', name: 'MySQL', group: 'Data', mark: 'SQL' },
+  { id: 'git', name: 'Git & GitHub', group: 'Tooling', mark: 'GIT' },
+  { id: 'it-support', name: 'IT Support', group: 'Infrastructure', mark: 'IT' },
 ]
+
+export const education = {
+  degree: 'Bachelor of Science in Information Technology',
+  school: 'Mapúa Malayan Colleges Laguna',
+  college: 'College of Computer and Information Science',
+  academicYear: 'Academic Year 2025–2026',
+}
 
 export const experience = {
   period: '2026',
@@ -186,7 +199,7 @@ export const softwareProjects = [
 
 export const learning = [
   'Responsive Web Design',
-  'JavaScript Fundamentals',
+  'JavaScript Application Development',
   'Database Management',
   'System Analysis & Design',
   'Cloud & Web Deployment',

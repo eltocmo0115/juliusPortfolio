@@ -68,6 +68,11 @@ img { display:block; max-width:100%; }
 .about-copy .lead-copy { color:var(--ink); font-size:clamp(1.35rem,2vw,1.8rem); line-height:1.45; }
 .about-links { display:flex; flex-wrap:wrap; gap:1rem 2rem; margin-top:2rem; }
 .about-links a { display:inline-flex; align-items:center; min-height:44px; padding:.65rem 0; border-bottom:1px solid; font-weight:800; font-size:.8rem; }
+.education-card { margin-top:2rem; padding:1.35rem 1.5rem; background:var(--paper); border:1px solid var(--ink); box-shadow:7px 7px 0 var(--acid); }
+.education-card p { margin:0 0:.8rem; color:var(--muted); font:600 .65rem/1 'Cascadia Mono','SFMono-Regular',Consolas,monospace; text-transform:uppercase; }
+.education-card h3 { margin:0; font-size:1.25rem; line-height:1.25; }
+.education-card strong { display:block; margin-top:.55rem; font-size:.85rem; }
+.education-card span { display:block; margin-top:.35rem; color:var(--muted); font:500 .62rem/1.5 'Cascadia Mono','SFMono-Regular',Consolas,monospace; text-transform:uppercase; }
 
 .experience-section { background:var(--paper-2); }
 .experience-card { display:grid; grid-template-columns:minmax(130px,.28fr) minmax(280px,.72fr) minmax(320px,1fr); border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); }

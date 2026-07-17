@@ -1,4 +1,4 @@
-import { profile } from '@/data/portfolioData'
+import { education, profile } from '@/data/portfolioData'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 function AboutSection() {
@@ -17,6 +17,12 @@ function AboutSection() {
           <p>
             I learn by turning requirements into working prototypes—mapping the workflow, shaping a clear interface, and connecting the data and logic underneath. I care about the full experience: how a product looks, how it behaves, and how confidently someone can use it.
           </p>
+          <div className="education-card">
+            <p>Education</p>
+            <h3>{education.degree}</h3>
+            <strong>{education.school}</strong>
+            <span>{education.college} · {education.academicYear}</span>
+          </div>
           <div className="about-links">
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
