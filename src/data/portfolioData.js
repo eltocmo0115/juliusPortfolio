@@ -7,6 +7,7 @@ import binanLogin from '@/assets/projects/binan-login.png'
 import binanHomepage from '@/assets/projects/binan-homepage.png'
 import binanAdminDashboard from '@/assets/projects/binan-admin-dashboard.png'
 import quickServePos from '@/assets/projects/quickserve-pos.png'
+import airAlertLogin from '@/assets/projects/air-alert-login.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
@@ -54,7 +55,9 @@ export const capstoneProject = {
   sourceUrl: 'https://github.com/romar0112/AirAlert',
   sourceLabel: 'View Android source',
   accent: 'lime',
-  visual: 'mobile',
+  visual: 'screenshot',
+  previewImage: airAlertLogin,
+  previewAlt: 'Air Alert Android login screen with email, password, account registration, and company registration options',
 }
 
 export const softwareProjects = [
