@@ -6,6 +6,7 @@ import ePadalaAdmin from '@/assets/projects/epadala-admin-dashboard.png'
 import binanLogin from '@/assets/projects/binan-login.png'
 import binanHomepage from '@/assets/projects/binan-homepage.png'
 import binanAdminDashboard from '@/assets/projects/binan-admin-dashboard.png'
+import quickServePos from '@/assets/projects/quickserve-pos.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
@@ -23,7 +24,7 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '05', label: 'public projects' },
+  { value: '06', label: 'public projects' },
   { value: 'Web + Android', label: 'current focus' },
   { value: 'PH', label: 'based in' },
 ]
@@ -131,6 +132,25 @@ export const softwareProjects = [
       { src: binanHomepage, alt: 'City Government of Biñan public website homepage' },
       { src: binanLogin, alt: 'City Government of Biñan administrator sign-in page' },
       { src: binanAdminDashboard, alt: 'City Government of Biñan content management dashboard' },
+    ],
+  },
+  {
+    id: 'quickserve-pos',
+    index: '06',
+    year: 'Point-of-sale system · Public source',
+    title: 'QuickServe POS',
+    summary:
+      'A local-first, browser-based point-of-sale system designed for fast-food counter operations.',
+    outcome:
+      'Built a responsive cashier workspace backed by independently deployable menu, ordering, and API gateway services, with persistent menu and order records.',
+    features: ['Fast order entry', 'Menu management', 'Order status workflow', 'Persistent local records'],
+    softwareUsed: ['TypeScript', 'React', 'C#', 'ASP.NET Core'],
+    sourceUrl: 'https://github.com/romar0112/Fast_Food_POS',
+    sourceLabel: 'View POS source',
+    accent: 'orange',
+    visual: 'gallery',
+    previewImages: [
+      { src: quickServePos, alt: 'QuickServe POS cashier order-building workspace' },
     ],
   },
 ]
