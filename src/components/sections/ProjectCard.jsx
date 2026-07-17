@@ -5,6 +5,14 @@ function ProjectPreview({ project }) {
   const [selectedImage, setSelectedImage] = useState(null)
   const dialogRef = useRef(null)
   const triggerRef = useRef(null)
+  const images = project.visual === 'gallery'
+    ? project.previewImages
+    : project.visual === 'screenshot'
+      ? [{
+          src: project.previewImage,
+          alt: project.previewAlt ?? `${project.title} interface preview`,
+        }]
+      : []
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -22,6 +30,13 @@ function ProjectPreview({ project }) {
 
   const closeImage = () => dialogRef.current?.close()
 
+  const navigateImage = (direction) => {
+    if (images.length < 2) return
+    const currentIndex = images.findIndex((image) => image.src === selectedImage?.src)
+    const nextIndex = (currentIndex + direction + images.length) % images.length
+    setSelectedImage(images[nextIndex])
+  }
+
   const modal = (
     <dialog
       className="project-image-modal"
@@ -29,6 +44,10 @@ function ProjectPreview({ project }) {
       aria-label={selectedImage ? `${project.title} screenshot preview` : undefined}
       onClick={(event) => {
         if (event.target === event.currentTarget) closeImage()
+      }}
+      onKeyDown={(event) => {
+        if (event.key === 'ArrowLeft') navigateImage(-1)
+        if (event.key === 'ArrowRight') navigateImage(1)
       }}
       onClose={() => {
         setSelectedImage(null)
@@ -39,7 +58,22 @@ function ProjectPreview({ project }) {
       <div className="project-image-modal-content">
         <div className="project-image-modal-bar">
           <p>{project.title}</p>
-          <button type="button" onClick={closeImage} aria-label="Close image preview">Close <span aria-hidden="true">×</span></button>
+          <div className="project-image-modal-actions">
+            {images.length > 1 && (
+              <>
+                <button className="modal-nav-button" type="button" onClick={() => navigateImage(-1)} aria-label="View previous screenshot">
+                  <span aria-hidden="true">←</span> Previous
+                </button>
+                <span className="modal-image-count" aria-live="polite">
+                  {images.findIndex((image) => image.src === selectedImage?.src) + 1} / {images.length}
+                </span>
+                <button className="modal-nav-button modal-next-button" type="button" onClick={() => navigateImage(1)} aria-label="View next screenshot">
+                  Next <span aria-hidden="true">→</span>
+                </button>
+              </>
+            )}
+            <button className="modal-close-button" type="button" onClick={closeImage} aria-label="Close image preview">Close <span aria-hidden="true">×</span></button>
+          </div>
         </div>
         {selectedImage && <img src={selectedImage.src} alt={selectedImage.alt} />}
       </div>
@@ -68,10 +102,7 @@ function ProjectPreview({ project }) {
   }
 
   if (project.visual === 'screenshot') {
-    const image = {
-      src: project.previewImage,
-      alt: project.previewAlt ?? `${project.title} interface preview`,
-    }
+    const image = images[0]
     return (
       <>
         <div className="app-screenshot-preview">

@@ -165,9 +165,15 @@ img { display:block; max-width:100%; }
 .project-image-modal-content { display:grid; grid-template-rows:auto minmax(0,1fr); max-height:92vh; }
 .project-image-modal-bar { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.85rem 1rem; border-bottom:1px solid rgba(255,255,255,.2); }
 .project-image-modal-bar p { margin:0; font:600 .68rem/1 'Cascadia Mono','SFMono-Regular',Consolas,monospace; text-transform:uppercase; }
+.project-image-modal-actions { display:flex; align-items:center; gap:.5rem; }
 .project-image-modal-bar button { min-height:40px; padding:.55rem .8rem; color:var(--white); background:transparent; border:1px solid rgba(255,255,255,.35); font:700 .68rem/1 'Cascadia Mono','SFMono-Regular',Consolas,monospace; text-transform:uppercase; cursor:pointer; }
+.project-image-modal-bar .modal-next-button { color:var(--ink); background:var(--acid); border-color:var(--acid); }
+.project-image-modal-bar .modal-nav-button:hover,.project-image-modal-bar .modal-close-button:hover { color:var(--ink); background:var(--white); }
+.modal-image-count { min-width:3rem; color:#aaa; text-align:center; font:600 .64rem/1 'Cascadia Mono','SFMono-Regular',Consolas,monospace; }
 .project-image-modal-bar button span { margin-left:.35rem; font-size:1rem; }
-.project-image-modal-content>img { width:100%; max-height:calc(92vh - 58px); object-fit:contain; background:#101010; }
+.modal-nav-button span { margin:0 .35rem 0 0!important; }
+.modal-next-button span { margin:0 0 0 .35rem!important; }
+.project-image-modal-content>img { width:auto; max-width:100%; max-height:calc(92vh - 58px); margin:auto; object-fit:contain; background:#101010; }
 .tech-list { display:flex; flex-wrap:wrap; gap:.45rem; margin:1.2rem 0 0; padding:0; list-style:none; }
 .tech-list li { color:#aaa; padding:.45rem .55rem; }
 
@@ -294,6 +300,9 @@ img { display:block; max-width:100%; }
   .project-meta { display:flex; align-items:center; gap:1rem; }
   .project-meta p { margin:0; }
   .project-visual { grid-column:1; }
+  .project-image-modal-bar { align-items:flex-start; flex-direction:column; }
+  .project-image-modal-actions { width:100%; flex-wrap:wrap; }
+  .modal-close-button { margin-left:auto; }
   .mock-layout { min-height:180px; }
   .footer-main { padding-bottom:3.5rem; }
   .footer-bottom { align-items:flex-start; flex-direction:column; gap:1.5rem; }

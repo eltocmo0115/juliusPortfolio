@@ -1,16 +1,16 @@
 import healthTipShuffleScreenshot from '@/assets/projects/health-tip-shuffle.png'
-import ePadalaLanding from '@/assets/projects/epadala-landing.png'
-import ePadalaRequests from '@/assets/projects/epadala-customer-requests.png'
-import ePadalaDriver from '@/assets/projects/epadala-driver-dashboard.png'
-import ePadalaAdmin from '@/assets/projects/epadala-admin-dashboard.png'
+import ePadalaLanding from '@/assets/projects/epadala-landing-hd.png'
+import ePadalaRequests from '@/assets/projects/epadala-customer-requests-hd.png'
+import ePadalaDriver from '@/assets/projects/epadala-driver-dashboard-hd.png'
+import ePadalaAdmin from '@/assets/projects/epadala-admin-dashboard-hd.png'
 import binanLogin from '@/assets/projects/binan-login.png'
 import binanHomepage from '@/assets/projects/binan-homepage.png'
 import binanAdminDashboard from '@/assets/projects/binan-admin-dashboard.png'
 import quickServePos from '@/assets/projects/quickserve-pos.png'
 import airAlertLogin from '@/assets/projects/air-alert-login.png'
-import electricBillingLogin from '@/assets/projects/electric-billing-login.png'
-import electricBillingAdmin from '@/assets/projects/electric-billing-admin.png'
-import electricBillingWorkspace from '@/assets/projects/electric-billing-workspace.png'
+import electricBillingLogin from '@/assets/projects/electric-billing-login-hd.png'
+import electricBillingAdmin from '@/assets/projects/electric-billing-admin-hd.png'
+import electricBillingWorkspace from '@/assets/projects/electric-billing-workspace-hd.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
