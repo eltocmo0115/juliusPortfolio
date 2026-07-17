@@ -1,4 +1,8 @@
 import healthTipShuffleScreenshot from '@/assets/projects/health-tip-shuffle.png'
+import ePadalaLanding from '@/assets/projects/epadala-landing.png'
+import ePadalaRequests from '@/assets/projects/epadala-customer-requests.png'
+import ePadalaDriver from '@/assets/projects/epadala-driver-dashboard.png'
+import ePadalaAdmin from '@/assets/projects/epadala-admin-dashboard.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
@@ -16,7 +20,7 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '03', label: 'public projects' },
+  { value: '04', label: 'public projects' },
   { value: 'Web + Android', label: 'current focus' },
   { value: 'PH', label: 'based in' },
 ]
@@ -82,6 +86,28 @@ export const softwareProjects = [
     accent: 'coral',
     visual: 'screenshot',
     previewImage: healthTipShuffleScreenshot,
+  },
+  {
+    id: 'epadala',
+    index: '04',
+    year: 'Web marketplace · Public source',
+    title: 'E-Padala',
+    summary:
+      'A local courier marketplace that connects customers needing deliveries with verified drivers operating across Laguna.',
+    outcome:
+      'Built secure customer, driver, and administrator workflows for delivery requests, estimates, offers, fleet management, transactions, profiles, and reporting.',
+    features: ['Delivery request marketplace', 'Role-based dashboards', 'Driver & vehicle management', 'Offer & transaction flow'],
+    softwareUsed: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SQLite'],
+    sourceUrl: 'https://github.com/romar0112/E-padala-Courier-Service',
+    sourceLabel: 'View web source',
+    accent: 'gold',
+    visual: 'gallery',
+    previewImages: [
+      { src: ePadalaLanding, alt: 'E-Padala courier service landing page' },
+      { src: ePadalaRequests, alt: 'E-Padala customer delivery requests workspace' },
+      { src: ePadalaDriver, alt: 'E-Padala driver dashboard' },
+      { src: ePadalaAdmin, alt: 'E-Padala administrator dashboard' },
+    ],
   },
 ]
 

@@ -4,6 +4,8 @@ import generativeAiCertificate from '@/assets/credentials/generative-ai-certific
 import firewallCertificate from '@/assets/credentials/firewall-certificate.png'
 import bicycleLanesCertificate from '@/assets/credentials/bicycle-lanes-seminar.png'
 import dictCybersecurityCertificate from '@/assets/credentials/dict-cybersecurity-awareness.png'
+import wearOsCertificate from '@/assets/credentials/wearos-emerging-technology-seminar.png'
+import cloudComputingCertificate from '@/assets/credentials/cloud-computing-seminar.png'
 import { profile } from '@/data/portfolioData'
 
 const certifications = [
@@ -27,11 +29,25 @@ const certifications = [
 
 const seminars = [
   {
+    title: 'WearOS: Emerging Technology for Internet and Learning of Everything',
+    issuer: 'Mapúa Malayan Colleges Laguna',
+    date: 'November 23, 2024',
+    detail: 'IT180F professional programming seminar',
+    image: wearOsCertificate,
+  },
+  {
     title: 'Introduction to Edge Computing',
     issuer: 'USAID · Asia Open RAN Academy',
     date: 'August 31, 2024',
     detail: 'Advancing Open RAN in Asia webinar',
     image: edgeComputingCertificate,
+  },
+  {
+    title: 'Introduction to Cloud Computing',
+    issuer: 'USAID · Asia Open RAN Academy',
+    date: 'August 24, 2024',
+    detail: 'Advancing Open RAN in Asia webinar',
+    image: cloudComputingCertificate,
   },
   {
     title: 'Implementation and Protocols for Safe Bicycle Lanes',
@@ -218,7 +234,7 @@ function CredentialsSection() {
             <div className="credential-group-heading">
               <p>02</p>
               <h3 id="seminars-heading">Seminars</h3>
-              <span>3 learning events</span>
+              <span>5 learning events</span>
             </div>
             <div className="credential-grid">
               {seminars.map((item, index) => (

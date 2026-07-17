@@ -1,12 +1,31 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 function ProjectPreview({ project }) {
+  if (project.visual === 'gallery') {
+    return (
+      <div className="project-gallery" aria-label={`${project.title} interface previews`}>
+        {project.previewImages.map((image, index) => (
+          <a
+            className="project-gallery-item"
+            href={image.src}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`View ${project.title} screenshot ${index + 1}`}
+            key={image.src}
+          >
+            <img src={image.src} alt={image.alt} loading="lazy" />
+          </a>
+        ))}
+      </div>
+    )
+  }
+
   if (project.visual === 'screenshot') {
     return (
       <div className="app-screenshot-preview">
         <img
           src={project.previewImage}
-          alt="Health Tips Shuffle app showing a hydration reminder and timer controls"
+          alt={project.previewAlt ?? `${project.title} interface preview`}
         />
       </div>
     )
