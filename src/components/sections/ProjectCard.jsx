@@ -1,7 +1,18 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
-function ProjectPreview({ type }) {
-  if (type === 'mobile') {
+function ProjectPreview({ project }) {
+  if (project.visual === 'screenshot') {
+    return (
+      <div className="app-screenshot-preview">
+        <img
+          src={project.previewImage}
+          alt="Health Tips Shuffle app showing a hydration reminder and timer controls"
+        />
+      </div>
+    )
+  }
+
+  if (project.visual === 'mobile') {
     return (
       <div className="mobile-preview" aria-hidden="true">
         <div className="phone phone-back"><span>CO</span><strong>Good</strong></div>
@@ -49,7 +60,7 @@ function ProjectCard({ project }) {
         </a>
       </div>
       <div className="project-visual">
-        <ProjectPreview type={project.visual} />
+        <ProjectPreview project={project} />
         <ul className="tech-list" aria-label={`${project.title} technologies`}>
           {project.softwareUsed.map((tool) => <li key={tool}>{tool}</li>)}
         </ul>

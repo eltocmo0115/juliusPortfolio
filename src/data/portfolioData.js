@@ -1,3 +1,5 @@
+import healthTipShuffleScreenshot from '@/assets/projects/health-tip-shuffle.png'
+
 export const profile = {
   name: 'Julius T. Piñon',
   shortName: 'Julius',
@@ -14,7 +16,7 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '02', label: 'public projects' },
+  { value: '03', label: 'public projects' },
   { value: 'Web + Android', label: 'current focus' },
   { value: 'PH', label: 'based in' },
 ]
@@ -63,6 +65,23 @@ export const softwareProjects = [
     sourceLabel: 'View web source',
     accent: 'cyan',
     visual: 'dashboard',
+  },
+  {
+    id: 'health-tip-shuffle',
+    index: '03',
+    year: 'Android application · Public source',
+    title: 'Health Tips Shuffle',
+    summary:
+      'A simple Android wellness app that cycles through practical reminders for healthier everyday habits.',
+    outcome:
+      'Built an adjustable tip carousel with timed rotation, start and pause controls, and an option to shuffle to another tip instantly.',
+    features: ['Automatic tip rotation', 'Adjustable timer', 'Pause & resume', 'Manual tip shuffle'],
+    softwareUsed: ['Kotlin', 'Jetpack Compose', 'Material 3', 'Android'],
+    sourceUrl: 'https://github.com/romar0112/HealthTipShuffle_Mobile',
+    sourceLabel: 'View Android source',
+    accent: 'coral',
+    visual: 'screenshot',
+    previewImage: healthTipShuffleScreenshot,
   },
 ]
 
