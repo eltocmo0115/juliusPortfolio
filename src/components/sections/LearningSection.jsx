@@ -7,7 +7,7 @@ function LearningSection() {
     <section id="learning" className="section learning-section">
       <div className="page-wrap learning-grid">
         <div>
-          <p className="section-kicker">05 / Always learning</p>
+          <p className="section-kicker">06 / Always learning</p>
           <h2>Beyond the classroom</h2>
           <p>Areas I’m continuing to practice through coursework, independent study, and projects.</p>
         </div>

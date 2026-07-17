@@ -41,6 +41,24 @@ export const programmingSkills = [
   { id: 'mysql', name: 'MySQL', group: 'Data', mark: 'SQL' },
 ]
 
+export const experience = {
+  period: '2026',
+  type: 'IT Practicum · Internship',
+  role: 'Information Technology Intern',
+  organization: 'City Government of Biñan',
+  team: 'Information and Communications Technology Office (ICTO)',
+  summary:
+    'Worked across system development and IT support, helping maintain the city’s official information portal while supporting municipal technology operations.',
+  highlights: [
+    'Maintained and optimized the CodeIgniter 4 and MySQL city website.',
+    'Strengthened role-based access, controller security, and data integrity rules.',
+    'Improved content scheduling, rich-text editing, document previews, and filtering.',
+    'Troubleshot hardware and networks and helped deploy Tech4Ed workstations.',
+  ],
+  tools: ['PHP', 'CodeIgniter 4', 'MySQL', 'Bootstrap 5', 'Git & GitHub', 'IT Support'],
+  reportUrl: '/documents/it-practicum-final-report.pdf',
+}
+
 export const capstoneProject = {
   id: 'air-alert',
   index: '01',
@@ -170,6 +188,7 @@ export const learning = [
 
 export const timeline = [
   { label: 'About', target: '#about' },
+  { label: 'Experience', target: '#experience' },
   { label: 'Skills', target: '#skills' },
   { label: 'Work', target: '#projects' },
   { label: 'Credentials', target: '#credentials' },

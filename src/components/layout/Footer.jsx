@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer id="contact" className="site-footer">
       <div className="page-wrap">
-        <p className="section-kicker">06 / Contact</p>
+        <p className="section-kicker">07 / Contact</p>
         <div className="footer-main">
           <h2>Have a project or opportunity in mind?</h2>
           <a className="footer-email" href={`mailto:${profile.email}`}>{profile.email}<span aria-hidden="true">↗</span></a>

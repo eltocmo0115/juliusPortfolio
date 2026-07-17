@@ -197,7 +197,7 @@ function CredentialsSection() {
       <div className="page-wrap">
         <div className="section-heading-row credentials-heading">
           <div>
-            <p className="section-kicker">04 / Credentials</p>
+            <p className="section-kicker">05 / Credentials</p>
             <h2>Learning, documented.</h2>
           </div>
           <p>Certificates and seminars that reflect my continued learning across AI, cybersecurity, edge computing, and technology in the community.</p>

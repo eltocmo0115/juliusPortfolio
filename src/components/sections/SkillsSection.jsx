@@ -8,7 +8,7 @@ function SkillsSection() {
       <div className="page-wrap">
         <div className="section-heading-row">
           <div>
-            <p className="section-kicker">02 / Toolkit</p>
+            <p className="section-kicker">03 / Toolkit</p>
             <h2>Tools I build with</h2>
           </div>
           <p>A practical stack for designing, building, and shipping responsive web systems.</p>
