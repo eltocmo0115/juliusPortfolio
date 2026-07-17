@@ -8,6 +8,9 @@ import binanHomepage from '@/assets/projects/binan-homepage.png'
 import binanAdminDashboard from '@/assets/projects/binan-admin-dashboard.png'
 import quickServePos from '@/assets/projects/quickserve-pos.png'
 import airAlertLogin from '@/assets/projects/air-alert-login.png'
+import electricBillingLogin from '@/assets/projects/electric-billing-login.png'
+import electricBillingAdmin from '@/assets/projects/electric-billing-admin.png'
+import electricBillingWorkspace from '@/assets/projects/electric-billing-workspace.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
@@ -93,7 +96,12 @@ export const softwareProjects = [
     sourceUrl: 'https://github.com/romar0112/electric-billing',
     sourceLabel: 'View web source',
     accent: 'cyan',
-    visual: 'dashboard',
+    visual: 'gallery',
+    previewImages: [
+      { src: electricBillingLogin, alt: 'Electric Billing secure sign-in page' },
+      { src: electricBillingAdmin, alt: 'Electric Billing administrator system overview' },
+      { src: electricBillingWorkspace, alt: 'Electric Billing operator bill computation workspace' },
+    ],
   },
   {
     id: 'health-tip-shuffle',
