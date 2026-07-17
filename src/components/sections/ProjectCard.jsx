@@ -1,33 +1,91 @@
+import { useEffect, useRef, useState } from 'react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 function ProjectPreview({ project }) {
+  const [selectedImage, setSelectedImage] = useState(null)
+  const dialogRef = useRef(null)
+  const triggerRef = useRef(null)
+
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (selectedImage && !dialog.open) {
+      dialog.showModal()
+      document.body.classList.add('modal-open')
+    }
+    return () => document.body.classList.remove('modal-open')
+  }, [selectedImage])
+
+  const openImage = (image, event) => {
+    triggerRef.current = event.currentTarget
+    setSelectedImage(image)
+  }
+
+  const closeImage = () => dialogRef.current?.close()
+
+  const modal = (
+    <dialog
+      className="project-image-modal"
+      ref={dialogRef}
+      aria-label={selectedImage ? `${project.title} screenshot preview` : undefined}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) closeImage()
+      }}
+      onClose={() => {
+        setSelectedImage(null)
+        document.body.classList.remove('modal-open')
+        triggerRef.current?.focus()
+      }}
+    >
+      <div className="project-image-modal-content">
+        <div className="project-image-modal-bar">
+          <p>{project.title}</p>
+          <button type="button" onClick={closeImage} aria-label="Close image preview">Close <span aria-hidden="true">×</span></button>
+        </div>
+        {selectedImage && <img src={selectedImage.src} alt={selectedImage.alt} />}
+      </div>
+    </dialog>
+  )
+
   if (project.visual === 'gallery') {
     return (
-      <div className="project-gallery" aria-label={`${project.title} interface previews`}>
-        {project.previewImages.map((image, index) => (
-          <a
-            className="project-gallery-item"
-            href={image.src}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`View ${project.title} screenshot ${index + 1}`}
-            key={image.src}
-          >
-            <img src={image.src} alt={image.alt} loading="lazy" />
-          </a>
-        ))}
-      </div>
+      <>
+        <div className="project-gallery" aria-label={`${project.title} interface previews`}>
+          {project.previewImages.map((image, index) => (
+            <button
+              type="button"
+              className="project-gallery-item"
+              aria-label={`Open ${project.title} screenshot ${index + 1}`}
+              onClick={(event) => openImage(image, event)}
+              key={image.src}
+            >
+              <img src={image.src} alt={image.alt} loading="lazy" />
+            </button>
+          ))}
+        </div>
+        {modal}
+      </>
     )
   }
 
   if (project.visual === 'screenshot') {
+    const image = {
+      src: project.previewImage,
+      alt: project.previewAlt ?? `${project.title} interface preview`,
+    }
     return (
-      <div className="app-screenshot-preview">
-        <img
-          src={project.previewImage}
-          alt={project.previewAlt ?? `${project.title} interface preview`}
-        />
-      </div>
+      <>
+        <div className="app-screenshot-preview">
+          <button
+            type="button"
+            className="app-screenshot-button"
+            aria-label={`Open ${project.title} screenshot`}
+            onClick={(event) => openImage(image, event)}
+          >
+            <img src={image.src} alt={image.alt} loading="lazy" />
+          </button>
+        </div>
+        {modal}
+      </>
     )
   }
 
