@@ -3,6 +3,9 @@ import ePadalaLanding from '@/assets/projects/epadala-landing.png'
 import ePadalaRequests from '@/assets/projects/epadala-customer-requests.png'
 import ePadalaDriver from '@/assets/projects/epadala-driver-dashboard.png'
 import ePadalaAdmin from '@/assets/projects/epadala-admin-dashboard.png'
+import binanLogin from '@/assets/projects/binan-login.png'
+import binanHomepage from '@/assets/projects/binan-homepage.png'
+import binanAdminDashboard from '@/assets/projects/binan-admin-dashboard.png'
 
 export const profile = {
   name: 'Julius T. Piñon',
@@ -20,7 +23,7 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '04', label: 'public projects' },
+  { value: '05', label: 'public projects' },
   { value: 'Web + Android', label: 'current focus' },
   { value: 'PH', label: 'based in' },
 ]
@@ -107,6 +110,27 @@ export const softwareProjects = [
       { src: ePadalaRequests, alt: 'E-Padala customer delivery requests workspace' },
       { src: ePadalaDriver, alt: 'E-Padala driver dashboard' },
       { src: ePadalaAdmin, alt: 'E-Padala administrator dashboard' },
+    ],
+  },
+  {
+    id: 'binan-city-website',
+    index: '05',
+    year: 'Government web portal · Public source',
+    title: 'City Government of Biñan Website',
+    summary:
+      'A public information portal and content-management system for the City Government of Biñan.',
+    outcome:
+      'Contributed to the public-facing city website and its authenticated administration workspace for managing municipal content, services, departments, careers, officials, disclosures, and visitor activity.',
+    features: ['Public information portal', 'Admin content management', 'Role-based access', 'Visitor analytics'],
+    softwareUsed: ['PHP', 'CodeIgniter 4', 'MySQL', 'JavaScript'],
+    sourceUrl: 'https://github.com/JustinMoscoso/websiteBinan',
+    sourceLabel: 'View web source',
+    accent: 'green',
+    visual: 'gallery',
+    previewImages: [
+      { src: binanHomepage, alt: 'City Government of Biñan public website homepage' },
+      { src: binanLogin, alt: 'City Government of Biñan administrator sign-in page' },
+      { src: binanAdminDashboard, alt: 'City Government of Biñan content management dashboard' },
     ],
   },
 ]
