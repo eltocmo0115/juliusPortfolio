@@ -76,7 +76,7 @@ export const softwareProjects = [
     outcome:
       'Built an adjustable tip carousel with timed rotation, start and pause controls, and an option to shuffle to another tip instantly.',
     features: ['Automatic tip rotation', 'Adjustable timer', 'Pause & resume', 'Manual tip shuffle'],
-    softwareUsed: ['Kotlin', 'Jetpack Compose', 'Material 3', 'Android'],
+    softwareUsed: ['C#', '.NET 10', 'Android SDK', 'XML Layouts'],
     sourceUrl: 'https://github.com/romar0112/HealthTipShuffle_Mobile',
     sourceLabel: 'View Android source',
     accent: 'coral',
