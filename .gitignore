@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Local document work and generated publishing artifacts
+tmp/
+output/
+.sites-publish-*/
+~$*
+*.tmp
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
