@@ -20,10 +20,11 @@ function HeroSection() {
             </a>
             <a
               className="button button-secondary button-cv"
-              href="/documents/julius-romar-pinon-cv.pdf"
-              download="Julius-Romar-Pinon-CV.pdf"
+              href="/images/julius-romar-pinon-resume.png"
+              target="_blank"
+              rel="noreferrer"
             >
-              Download CV <span aria-hidden="true">↓</span>
+              See My Resume <span aria-hidden="true">↗</span>
             </a>
             <a
               className="button button-secondary"
